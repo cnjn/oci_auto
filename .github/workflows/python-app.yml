@@ -3,14 +3,21 @@
 
 name: 自动申请Oracle服务器
 
-on:
+# on:
 #  push:
 #    branches: [ "main" ]
 #  pull_request:
 #    branches: [ "main" ]
 # 每天8:30执行
-  schedule：
+#  schedule：
+#    - cron:  '30 8 * * *'
+
+on:
+    schedule:
+        # * is a special character in YAML so you have to quote this string
     - cron:  '30 8 * * *'
+
+
 permissions:
   contents: read
 
